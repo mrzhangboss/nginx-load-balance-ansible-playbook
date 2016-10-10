@@ -1,0 +1,4 @@
+---
+- name: copy nginx config file 
+  template: src=lunge.conf  dest=/etc/nginx/conf.d/lungelog.conf
+  notify: restart nginx

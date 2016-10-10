@@ -1,0 +1,2 @@
+- name: git clone project
+  git: dest={{ project_path }} repo={{ project_git_path }} update=yes

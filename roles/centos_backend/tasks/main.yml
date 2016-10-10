@@ -1,0 +1,4 @@
+---
+- include: install_require.yml
+- include: copy_conf.yml 
+- include: git_clone.yml

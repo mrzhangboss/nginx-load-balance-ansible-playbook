@@ -1,0 +1,21 @@
+---
+- name: deploy proxy service
+  hosts: tencent
+  remote_user: root
+  roles:
+  - proxy
+
+- name: deploy CentOS backend
+  hosts: digital
+  remote_user: root
+  
+  roles:
+  - centos_backend
+
+- name: deploy ubuntu backend
+  hosts: ali 
+  remote_user: root
+  
+  roles:
+  - ubuntu_backend 
+
