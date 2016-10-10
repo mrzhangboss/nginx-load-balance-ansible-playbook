@@ -1,0 +1,14 @@
+---
+- hosts: ali
+  remote_user: root
+
+  tasks:
+  - name: git clone
+    git: dest=/var/blog repo=https://github.com/mrzhangboss/mrzhangboss.github.io update=yes
+  - name: copy nginx config
+    copy: src=~/test/lunge.conf  dest=/etc/nginx/sites-enabled/default
+    notify: restart nginx
+   
+  handlers:
+  - name: restart nginx
+    service: name=nginx state=restarted enabled=yes
