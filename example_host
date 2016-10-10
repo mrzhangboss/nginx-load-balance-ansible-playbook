@@ -1,0 +1,6 @@
+[ali]
+my ansible_ssh_host=1.1.1.1 ansible_ssh_user=root 
+[tencent]
+main ansible_ssh_host=1.1.1.2 ansible_ssh_user=root
+[digital]
+google ansible_ssh_host=1.1.1.3 ansible_ssh_user=root
